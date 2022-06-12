@@ -11,61 +11,75 @@
     padding: 0;
 }
 html, body {
-    background: url(./background.svg);
+    background: url(./pcBackground.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     height: 100%;
 }
-.logo {
-    position: absolute;
-    width: 205px;
-    height: 366px;
-    left: 14px;
-    top: 60px;
-}
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: 200px;
-    padding-left: 24px;
-    box-sizing: border-box;
-    padding-bottom: 60px;
-}
-main > div {
-    margin-top: 26px;
     width: 100%;
-    min-height: 175px;
-    position: relative;
-    box-sizing: border-box;
-    padding-left: 80px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-main > div > * {
+.main-wrapper div {
     display: inline;
+    width: 40vw;
+    float: left;
+    max-width: 450px;
+}
+.main-wrapper > * {
+    position: absolute;
+}
+.main-wrapper > div:first-child h2 {
+    left: calc(100% + 28px);
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+.main-wrapper > div:first-child p {
+    text-align: right;
+}
+.main-wrapper > div:last-child {
+    margin-top: 20px;
+    bottom: 7%;
+    left: 53.5%;
+}
+.main-wrapper > div:nth-child(2) {
+    bottom: 54%;
+    right: 51.5%;
+    width: auto !important;
+}
+.main-wrapper > div:nth-child(2) h2 {
+    left: 100%;
+}
+.main-wrapper > div:nth-child(2) pre {
+    padding-right: 20px;
+    text-align: right;
+}
+.main-wrapper > div:nth-child(3) {
+    bottom: 50%;
+    left: 53.5%;
+    transform: translate(0, 28%);
 }
 h2 {
     font-family: 'Eina-SemiBold';
     font-style: normal;
     font-weight: 600;
-    font-size: 9.7px;
-    line-height: 13px;
+    font-size: 15.5px;
+    line-height: 21px;
     letter-spacing: 0.16em;
     color: #FFFFFF;
     position: absolute;
-    top: 50%;
-    left: 6px;
+    top: 45%;
+    left: -31px;
     transform: translateX(-50%) translateY(-50%) rotate(-90deg);
 }
-p {
+pre {
     font-family: 'Eina-Regular';
-    font-size: 9.3px;
-    line-height: 12px;
+    font-size: 15px;
+    line-height: 17px;
     color: #FFFFFF;
     letter-spacing: -0.01em;
 }
@@ -73,98 +87,146 @@ a {
     color: white;
     text-decoration: underline;
 }
-@media screen and (max-width: 420px) {
-    main {
-        top: 170px;
+.pc-logo {
+    width: 340px;
+    bottom: 65%;
+    transform: translate(0, -100%);
+    right: 52.5%;
+}
+.main-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.logo:not(.pc-logo) {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .main-wrapper > div:nth-child(2) {
+        right: 52.5%;
     }
-    .logo {
-        top: 40px;
+    .main-wrapper > div:nth-child(3), .main-wrapper > div:last-child {
+        left: 54.5%;
+    }
+    .pc-logo {
+        right: 54%;
     }
     h2 {
-        font-size: 9.5px;
-        letter-spacing: 0.1em;
-    }
-    p {
-        font-size: 8.3px; 
-    }
-    main > div {
-        min-height: 140px;
+        left: -25px;
     }
 }
-@media screen and (max-width: 375px) {
-    h2 {
-        font-size: 8.5px;
-        letter-spacing: 0.1em;
-    }
-    p {
-        font-size: 7.5px; 
-    }
-    main > div {
-        min-height: 130px;
+@media screen and (max-height: 700px) {
+    .main-wrapper > div:last-child {
+        bottom: 2%;
     }
 }
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 1200px), (max-height: 890px) {
+    pre {
+        font-size: 12px;
+        line-height: 13px;
+    }
     h2 {
-        font-size: 8.8px;
-        letter-spacing: 0.1em;
+        font-size: 11px;
     }
-    p {
-        font-size: 7.3px; 
-    }
-    main > div {
-        min-height: 80px;
-    }
-}
-
-@media screen and (min-width: 550px) {
-    h2 {
-        font-size: 10.2px;
-        letter-spacing: 0.1em;
-    }
-    p {
-        font-size: 10.1px; 
-    }
-}
-@media screen and (min-width: 700px) {
-    h2 {
-        font-size: 11.2px;
-        letter-spacing: 0.1em;
-    }
-    p {
-        font-size: 14.1px; 
-        line-height: 16px;
-    }
-    .logo {
-        width: 295px;
-        height: 466px;
-        left: 0;
+    .pc-logo {
+        width: 280px; 
+        right: 53%;
     }
 }
 
-@media screen and (min-width: 900px) {
-    main > div {
-        min-height: 500px;
+@media screen and (max-width: 850px) {
+    html, body {
+        background: url(./background.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100%;
+    }
+    .logo:not(.pc-logo) {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        width: 260px;
+    }
+    .pc-logo {
+        display: none;
+    }
+    .main-wrapper > div:nth-child(2) h2 {
+        left: -25px;
+    }
+    .main-wrapper > div {
+        left: 60px;
+    }
+    .main-wrapper > div pre {
+        text-align: left !important;
+        margin-left: 20px;
+    }
+    .main-wrapper > div:nth-child(3) {
+        left: 60px;
+        top: 300px;
+        height: 240px;
+    }
+    .main-wrapper div {
+        width: 300px;
+    }
+    .main-wrapper > div:last-child {
+        left: 60px;
+        top: 600px;
+        height: 190px;
+    }
+    .main-wrapper > div:nth-child(2) {
+        top: 230px;
+        height: 110px
+    }
+}
+@media screen and (max-width: 470px) {
+    /* .main-wrapper > div:nth-child(2) {
+        top: 25%;
+    }
+    .main-wrapper > div:nth-child(2) h2 {
+        top: 25%;
+    }
+    .main-wrapper > div:nth-child(3) {
+        top: 32%;
+    }
+    .main-wrapper > div:last-child {
+        top: 67%;
+    } */
+    .main-wrapper > div:last-child {
+        top: 550px;
+    } 
+    .main-wrapper > div:nth-child(3) {
+        top: 290px;
+    }
+    pre {
+        font-size: 9px;
+        line-height: 10px;
     }
     h2 {
-        font-size: 20.2px;
-        letter-spacing: 0.1em;
+        font-size: 9px;
+        top: 35%;
     }
-    p {
-        font-size: 23.1px; 
-        line-height: 28px;
+    .pc-logo {
+        width: 280px; 
+        right: 53%;
+    }
+    .logo:not(.pc-logo) { 
+        top: 0;
     }
 }
 
-@media screen and (min-width: 1200px) {
-    h2 {
-        font-size: 25.2px;
-        letter-spacing: 0.1em;
+@media screen and (max-width: 370px) {
+    .main-wrapper > div pre {
+        margin-left: 5px;
     }
-    p {
-        font-size: 28.1px; 
-        line-height: 32px;
+    .main-wrapper > div { 
+        left: 45px !important;
     }
-    main > div {
-        min-height: 500px;
+    .logo:not(.pc-logo) { 
+        left: 2px !important;
+    }
+    .main-wrapper div {
+        width: 150px;
     }
 }
