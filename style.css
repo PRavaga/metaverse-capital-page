@@ -171,7 +171,6 @@ a {
         height: 240px;
         bottom: 45%;
         transform: translate(0, 28%);
-        top: auto !important;
     }
     .main-wrapper div {
         width: 300px;
