@@ -43,7 +43,7 @@ main {
 }
 .main-wrapper > div:last-child {
     margin-top: 20px;
-    bottom: 7%;
+    bottom: 4%;
     left: 53.5%;
 }
 .main-wrapper > div:nth-child(2) {
@@ -54,14 +54,17 @@ main {
 .main-wrapper > div:nth-child(2) h2 {
     left: 100%;
 }
+.main-wrapper > div:nth-child(2) h2 {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
 .main-wrapper > div:nth-child(2) pre {
     padding-right: 20px;
     text-align: right;
 }
 .main-wrapper > div:nth-child(3) {
-    bottom: 50%;
+    /* bottom: 50%; */
     left: 53.5%;
-    transform: translate(0, 28%);
+    /* transform: translate(0, 28%); */
 }
 h2 {
     font-family: 'Eina-SemiBold';
@@ -79,7 +82,7 @@ h2 {
 pre {
     font-family: 'Eina-Regular';
     font-size: 15px;
-    line-height: 17px;
+    line-height: 1.4em;
     color: #FFFFFF;
     letter-spacing: -0.01em;
 }
@@ -123,7 +126,7 @@ a {
 @media screen and (max-width: 1200px), (max-height: 890px) {
     pre {
         font-size: 12px;
-        line-height: 13px;
+        line-height: 1.2em;
     }
     h2 {
         font-size: 11px;
@@ -166,6 +169,9 @@ a {
         left: 60px;
         top: 300px;
         height: 240px;
+        bottom: 45%;
+        transform: translate(0, 28%);
+        top: auto !important;
     }
     .main-wrapper div {
         width: 300px;
