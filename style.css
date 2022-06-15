@@ -36,7 +36,7 @@ main {
 }
 .main-wrapper > div:first-child h2 {
     left: calc(100% + 28px);
-    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
 }
 .main-wrapper > div:first-child p {
     text-align: right;
@@ -55,7 +55,13 @@ main {
     left: 100%;
 }
 .main-wrapper > div:nth-child(2) h2 {
-    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
+}
+.main-wrapper > div:nth-child(3) h2 {
+    top: 37%;
+}
+.main-wrapper > div:nth-child(2) h2 {
+    top: 37%;
 }
 .main-wrapper > div:nth-child(2) pre {
     padding-right: 20px;
@@ -77,7 +83,7 @@ h2 {
     position: absolute;
     top: 45%;
     left: -31px;
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(-50%) rotate(-90deg);
 }
 pre {
     font-family: 'Eina-Regular';
@@ -103,6 +109,9 @@ a {
 }
 .logo:not(.pc-logo) {
     display: none;
+}
+.main-wrapper > div:last-child h2 {
+    top: 40.3%; 
 }
 @media screen and (max-width: 1200px) {
     .main-wrapper > div:nth-child(2) {
@@ -134,6 +143,15 @@ a {
     .pc-logo {
         width: 280px; 
         right: 53%;
+    }
+    .main-wrapper > div:nth-child(3) h2 {
+        top: 41%;
+    }
+    .main-wrapper > div:nth-child(2) h2 {
+        top: 39%;
+    }
+    .main-wrapper > div:last-child h2 {
+        top: 43.5%; 
     }
 }
 
